@@ -23,6 +23,7 @@ body {
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
+  gap: 5px;
   width: calc(250px * 14);
 }
 
