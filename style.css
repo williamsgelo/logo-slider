@@ -1,6 +1,9 @@
 body {
+  display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh; /* Ensure the slider is centered vertically */
+  margin: 0; /* Remove default body margin */
 }
 
 @keyframes scroll {
@@ -14,17 +17,19 @@ body {
 
 .slider {
   height: 100px;
-  margin: auto;
+  margin: 0;
   overflow: hidden;
   position: relative;
-  width: auto;
+  width: calc(
+    250px * 7
+  ); /* Ensure the slider width is exactly the width of one set of slides */
 }
 
 .slider .slide-track {
-  animation: scroll 40s linear infinite;
   display: flex;
-  gap: 5px;
-  width: calc(250px * 14);
+  gap: 10px;
+  animation: scroll 40s linear infinite;
+  width: calc(250px * 14); /* 7 original slides + 7 duplicated slides */
 }
 
 .slider .slide {
