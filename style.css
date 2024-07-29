@@ -11,7 +11,9 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(
+      calc(-250px * 19)
+    ); /* Adjust this based on the number of assets */
   }
 }
 
@@ -21,15 +23,17 @@ body {
   overflow: hidden;
   position: relative;
   width: calc(
-    250px * 7
-  ); /* Ensure the slider width is exactly the width of one set of slides */
+    250px * 5
+  ); /* Adjust this to show more slides at a time if needed */
 }
 
 .slider .slide-track {
   display: flex;
   gap: 10px;
-  animation: scroll 40s linear infinite;
-  width: calc(250px * 14); /* 7 original slides + 7 duplicated slides */
+  animation: scroll 60s linear infinite; /* Adjust the duration to control the speed */
+  width: calc(
+    250px * 38 + 10px * 37
+  ); /* 19 original slides + 19 duplicated slides + gaps */
 }
 
 .slider .slide {
